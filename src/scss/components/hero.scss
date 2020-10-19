@@ -1,0 +1,31 @@
+.hero {
+  height: 100vh;
+  @media (max-width: 720px) { height: 90vh; }
+  background-image: linear-gradient(
+      to right,
+      rgba(#081E34, 1),
+      rgba(#01265C, .95),
+      rgba(#01265C, .75),
+      rgba(#243A5D, .55),
+      rgba(#01265C, .25)
+    ),
+    url('../img/hero_background.jpeg');
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: right;
+
+  display: grid;
+  align-items: center;
+  @media (max-width: 720px) { justify-items: center; }
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+
+  .imak-logo {
+    max-width: 100%;
+    @media (max-width: 720px) { max-width: 80vw; align-self: center; }
+    margin-bottom: 5rem;
+    padding: 2rem;
+    width: 50rem;
+    filter: drop-shadow(7px 7px 58px #090F1A);
+  }
+}

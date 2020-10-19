@@ -1,0 +1,19 @@
+{
+  "name": "kamelu_website",
+  "version": "1.0.0",
+  "main": "index.js",
+  "scripts": {
+    "dev": "parcel src/index.pug",
+    "build": "parcel build src/index.pug"
+  },
+  "license": "private",
+  "devDependencies": {
+    "parcel-bundler": "^1.12.4",
+    "parcel-plugin-imagemin": "^4.0.1",
+    "pug": "^3.0.0",
+    "sass": "^1.27.0"
+  },
+  "dependencies": {
+    "jquery": "^3.5.1"
+  }
+}

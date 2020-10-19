@@ -1,0 +1,142 @@
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap");
+/* http://meyerweb.com/eric/tools/css/reset/
+   v2.0 | 20110126
+   License: none (public domain)
+*/
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol, ul {
+  list-style: none;
+}
+
+blockquote, q {
+  quotes: none;
+}
+
+blockquote:before, blockquote:after,
+q:before, q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+.navbar {
+  overflow: hidden;
+  position: fixed;
+  top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+}
+.navbar .navbar-logo {
+  padding-left: 0.9rem;
+  height: 50px;
+  visibility: hidden;
+}
+.navbar .navbar-links {
+  padding-right: 0.5rem;
+  display: flex;
+  justify-content: end;
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #eeeeee;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #1c87c9;
+}
+
+.navbar-scrolled {
+  background-color: rgba(255, 255, 255, 0.98);
+  transition: background-color 200ms linear;
+}
+.navbar-scrolled a {
+  color: #233B61;
+}
+.navbar-scrolled .navbar-logo {
+  visibility: visible;
+}
+
+.hero {
+  height: 100vh;
+  background-image: linear-gradient(to right, #081e34, rgba(1, 38, 92, 0.95), rgba(1, 38, 92, 0.75), rgba(36, 58, 93, 0.55), rgba(1, 38, 92, 0.25)), url("/hero_background.81429ec9.jpeg");
+  background-repeat: repeat-x;
+  background-size: cover;
+  background-position: right;
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 1fr;
+  grid-template-rows: 1fr;
+}
+@media (max-width: 720px) {
+  .hero {
+    height: 90vh;
+  }
+}
+@media (max-width: 720px) {
+  .hero {
+    justify-items: center;
+  }
+}
+.hero .imak-logo {
+  max-width: 100%;
+  margin-bottom: 5rem;
+  padding: 2rem;
+  width: 50rem;
+  filter: drop-shadow(7px 7px 58px #090F1A);
+}
+@media (max-width: 720px) {
+  .hero .imak-logo {
+    max-width: 80vw;
+    align-self: center;
+  }
+}
+
+body {
+  font-family: "Montserrat", sans-serif;
+}
+
+/*# sourceMappingURL=/main.fb6bbcaf.css.map */

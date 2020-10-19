@@ -1,0 +1,50 @@
+.navbar {
+  overflow: hidden;
+  //background-color: #666666;
+  position: fixed;
+  top: 0;
+  padding-top: 0.5rem;
+  padding-bottom: 0.5rem;
+  width: 100%;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+
+  .navbar-logo {
+    padding-left: 0.9rem;
+    height: 50px;
+    visibility: hidden;
+  }
+  .navbar-links {
+    padding-right: 0.5rem;
+    display: flex;
+    justify-content: end;
+  }
+
+}
+
+.navbar a {
+  float: left;
+  display: block;
+  color: #eeeeee;
+  text-align: center;
+  padding: 15px 18px;
+  text-decoration: none;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.navbar a:hover {
+  color: #1c87c9;
+}
+
+
+.navbar-scrolled {
+  background-color: rgba(255,255,255,.98);
+  transition: background-color 200ms linear;
+  a {
+    color: #233B61;
+  }
+  .navbar-logo{
+    visibility: visible;
+  }
+}
