@@ -4,7 +4,7 @@
   "main": "index.js",
   "scripts": {
     "dev": "parcel src/index.pug",
-    "build": "parcel build src/index.pug"
+    "build": "parcel build src/index.pug -d docs"
   },
   "license": "private",
   "devDependencies": {
