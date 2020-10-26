@@ -1,0 +1,24 @@
+.somos-section {
+  display: grid;
+  gap: 1.5rem;
+  grid-template:
+    "title title"
+    "text image";
+  @media (max-width: $breakpoint-tablet) {
+    grid-template:
+      "title"
+      "text"
+      "image";
+  }
+  .section-title {
+    grid-area: title;
+  }
+
+  .section-text {
+    grid-area: text;
+  }
+  .section-image {
+    grid-area: image;
+    z-index: 2;
+  }
+}

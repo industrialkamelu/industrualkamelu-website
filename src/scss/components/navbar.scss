@@ -1,3 +1,7 @@
+$navbar-height: 50px;
+$links-hero-color: #eeeeee;
+$links-color: #233B61;
+
 .navbar {
   overflow: hidden;
   //background-color: #666666;
@@ -7,25 +11,57 @@
   padding-bottom: 0.5rem;
   width: 100%;
   display: grid;
-  grid-template-columns: 1fr 1fr;
+  grid-template:
+    "logo links";
+  @media (max-width: $breakpoint-tablet) {
+    grid-template:
+     "logo menu"
+     "links links";
+  }
+  z-index: 3;
 
+  .mobile-menu {
+    display: flex;
+    justify-content: flex-end;
+    cursor: pointer;
+    @media (min-width: $breakpoint-tablet) {
+      display: none;
+    }
+  }
+  .logo-link {
+    text-align: left;
+    padding: 0;
+  }
   .navbar-logo {
+    grid-area: logo;
     padding-left: 0.9rem;
-    height: 50px;
+    height: $navbar-height;
     visibility: hidden;
   }
+
   .navbar-links {
+    grid-area: links;
     padding-right: 0.5rem;
     display: flex;
-    justify-content: end;
+    justify-content: flex-end;
+    @media (max-width: $breakpoint-tablet) {
+      flex-direction: column;
+      justify-content: center;
+      z-index: 100;
+      display: none;
+      background: #263238;
+      color: whitesmoke !important;
+    }
   }
-
+  .navbar-links-active {
+    display: flex;
+  }
 }
 
 .navbar a {
   float: left;
   display: block;
-  color: #eeeeee;
+  color: $links-hero-color;
   text-align: center;
   padding: 15px 18px;
   text-decoration: none;
@@ -40,11 +76,20 @@
 
 .navbar-scrolled {
   background-color: rgba(255,255,255,.98);
+  box-shadow: 0px 3px 14px -2px rgba(107,107,107,1);
   transition: background-color 200ms linear;
   a {
-    color: #233B61;
+    color: $links-color;
+    @media (max-width: $breakpoint-tablet) {
+      color: whitesmoke;
+    }
   }
   .navbar-logo{
     visibility: visible;
+  }
+  .mobile-menu {
+    a {
+      color: $links-color;
+    }
   }
 }

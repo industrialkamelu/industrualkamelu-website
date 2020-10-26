@@ -1,8 +1,96 @@
+$blue-color: #233B61;
+
+$breakpoint-mobile: 480px;
+$breakpoint-tablet: 768px;
+
+
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
 @import 'components/reset.scss';
 @import 'components/navbar.scss';
 @import 'components/hero.scss';
+@import 'components/quienes_somos.scss';
+@import 'components/clientes.scss';
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Montserrat', sans-serif;
+  font-size: 1.1em;
+  line-height: 1.5em;
+  background: whitesmoke;
+}
+
+h1 {
+  font-size: 2rem;
+  font-weight: 600;
+  color: red;
+  padding-top: 3rem;
+  padding-bottom: 3rem;
+}
+
+h2 {
+  font-size: 1.7rem;
+  font-weight: 600;
+  color: $blue-color;
+  margin-top: 2.5rem;
+  margin-bottom: 1rem;
+}
+
+p {
+  margin-bottom: 1rem;
+}
+
+strong {
+  font-weight: 500;
+}
+
+ul {
+  list-style: none;
+  margin-left: 2em;
+  li {
+    margin-bottom: .5em;
+  }
+}
+
+
+ul li::before {
+  content: "\2022";  /* Add content: \2022 is the CSS Code/unicode for a bullet */
+  color: red; /* Change the color */
+  font-weight: 700; /* If you want it to be bold */
+  display: inline-block; /* Needed to add space between the bullet and the text */
+  width: 1em; /* Also needed for space (tweak if needed) */
+  margin-left: -1em; /* Also needed for space (tweak if needed) */
+}
+.container {
+  padding-left: 2rem;
+  padding-right: 2rem;
+}
+
+.shadow {
+  box-shadow: 0 8px 17px 2px rgba(0,0,0,0.14), 0 3px 14px 2px rgba(0,0,0,0.12), 0 5px 5px -3px rgba(0,0,0,0.2);
+}
+.rounded {
+   border-radius: 10px;
+}
+
+.title-section {
+  text-align: center;
+}
+
+.servicios-container {
+  background: $blue-color;
+  background: radial-gradient(circle, rgba(35,59,97,1) 0%, rgba(34,57,93,1) 63%, rgba(24,39,62,1) 97%);
+  padding-top: 3em;
+  padding-bottom: 3em;
+  transform: skewY(-1deg);
+  color: whitesmoke;
+
+  h1 {
+    color: white;
+  }
+  .content {
+    transform: skewY(1deg);
+  }
 }

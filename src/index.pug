@@ -7,19 +7,37 @@ html(lang="en")
     title Industrial Kamelu
   body
     .navbar
-      img.navbar-logo(src="img/navbar_logo.png", alt="Industrial Kamelu Logotipo")
-      .navbar-links
-        a(href="#quienes-somos-link") Quiénes Somos
-        a(href="#") Servicios
-        a(href="#") Clientes
+      a.logo-link(href="#")
+        img.navbar-logo(src="img/navbar_logo.png", alt="Industrial Kamelu Logotipo")
+      #js-navbar-toggle.mobile-menu
+        a(on-click="navBarToggle()") Menú
+      #js-menu.navbar-links
+        a(href="#quienes-somos") Quiénes Somos
+        a(href="#servicios") Servicios
+        a(href="#clientes") Clientes
         a(href="#") Contacto
     .hero
         img.imak-logo(src="img/imak_hero_logo.png", alt="IMAK logo")
-    .content
-      h1(id="quienes-somos-link") Quiénes Somos
-      each val in [1, 2, 3, 4, 5, 6, 7, 8, 8, 9, 10, 11, 12]
-        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi nostrum dolores similique harum optio sit, minus enim aut, minima ratione consequatur dignissimos velit vitae sed cum porro temporibus corporis id!
-        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi nostrum dolores similique harum optio sit, minus enim aut, minima ratione consequatur dignissimos velit vitae sed cum porro temporibus corporis id!
-        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi nostrum dolores similique harum optio sit, minus enim aut, minima ratione consequatur dignissimos velit vitae sed cum porro temporibus corporis id!
-        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi nostrum dolores similique harum optio sit, minus enim aut, minima ratione consequatur dignissimos velit vitae sed cum porro temporibus corporis id!
-        p Lorem ipsum dolor, sit amet consectetur adipisicing elit. Eligendi nostrum dolores similique harum optio sit, minus enim aut, minima ratione consequatur dignissimos velit vitae sed cum porro temporibus corporis id!
+
+    #quienes-somos.container.somos-section
+      .section-title
+        h1.title-section Quiénes Somos
+      .section-text
+        include text/somos.html
+      .section-image
+        img.rounded.shadow(src="img/5.jpg", style="max-width: 500px;", loading="lazy")
+
+    #servicios.container.servicios-container
+      .content
+        h1 Servicios
+        p La gama de servicios ofrecidos por Instalación y Mantenimiento Industrial Kamelu S.A. de C.V., se concentra en tres grandes áreas: Industrial, comercial y residencial.
+        p Nuestros servicios:
+        ul
+          li En calderas de vapor y agua caliente: Conexión, desconexión, reconstrucción y, mantenimiento preventivo, predictivo y correctivo; pruebas hidrostáticas, de operación y seguridad; trabajos de paileria (instalación de tuberías de agua, vapor, gas, líquidos térmicos, tubos flux,); automatización y actualización de sistemas de control; reparación de material aislante y refractario.
+          li Conexión, desconexión y mantenimiento a plantas de emergencia, subestaciones eléctricas.
+          li Remodelaciones residenciales.
+          li Instalaciones comerciales y obra civil.
+
+    #clientes.container
+      h1 Clientes
+      include text/clientes_text.pug
