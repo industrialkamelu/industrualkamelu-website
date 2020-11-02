@@ -39,5 +39,35 @@ html(lang="en")
           li Instalaciones comerciales y obra civil.
 
     #clientes.container
-      h1 Clientes
+      h1(style="text-align:center") Clientes
       include text/clientes_text.pug
+    .logos-container
+      .clientes-logos
+        img.grayscale-logo(src="img/clientes/pilgrims.png")
+        img.grayscale-logo(src="img/clientes/nutro_line.jpg")
+        img.grayscale-logo(src="img/clientes/carnes_gusi.png")
+        img.grayscale-logo(src="img/clientes/silanes.jpg")
+        img.grayscale-logo(src="img/clientes/bonafont.png")
+        img.grayscale-logo(src="img/clientes/selmec.png")
+        img.grayscale-logo(src="img/clientes/imss.png")
+        img.grayscale-logo(src="img/clientes/peasa.jpg")
+        img.grayscale-logo(src="img/clientes/lala.jpg")
+        img.grayscale-logo(src="img/clientes/constanzo.png")
+        img.grayscale-logo(src="img/clientes/mier_y_pesado.jpg")
+        img.grayscale-logo(src="img/clientes/lky.png")
+        img.grayscale-logo(src="img/clientes/concord.png")
+        img.grayscale-logo(src="img/clientes/gamex.jpg")
+        img.grayscale-logo(src="img/clientes/star_medica.png")
+        img.grayscale-logo(src="img/clientes/unam.png")
+        img.grayscale-logo(src="img/clientes/sanborns.jpg")
+        img.grayscale-logo(src="img/clientes/sears.png")
+        img.grayscale-logo(src="img/clientes/sedena.png")
+        img.grayscale-logo(src="img/clientes/iusa.png")
+        img.grayscale-logo(src="img/clientes/telcel.jpg")
+        img.grayscale-logo(src="img/clientes/citrofrut.png")
+
+    .container(style="background: #282828; padding-top: 2em; padding-bottom: 2em;")
+      .grid-gallery
+        each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16, 17, 18]
+          a.grid-gallery__item
+            img.grid-gallery__image(src="img/galeria/" + val + ".png" loading="lazy", style= "border-radius: 0.1em;")

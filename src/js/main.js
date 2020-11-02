@@ -4,6 +4,7 @@ import '../scss/main.scss'
 var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
 
+import 'slick-carousel'
 
 
 
@@ -23,8 +24,31 @@ $(function () {
   navBarToggle.addEventListener('click', function () {
     mainNav.classList.toggle('navbar-links-active');
   });
+  // Close mobile menu on click in a link
+  mainNav.addEventListener('click', function () {
+    mainNav.classList.toggle('navbar-links-active');
+  });
+
 });
+// ===========================================
 
 // ===========================================
+// *********** Clientes Carrusell  *************
+// ===========================================
+$(document).ready(function () {
+  $('.clientes-logos').slick({
+    lazyLoad: 'ondemand',
+    pauseOnHover: true,
+    slidesToShow: 6,
+    slidesToScroll: 1,
+    autoplay: true,
+    autoplaySpeed: 1500,
+    adaptiveHeight: true,
+    arrows: false
+  });
+});
+// ===========================================
+
+
 
 

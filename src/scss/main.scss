@@ -5,11 +5,14 @@ $breakpoint-tablet: 768px;
 
 
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700&display=swap');
+@import "../../node_modules/slick-carousel/slick/slick.css";
+@import "../../node_modules/slick-carousel/slick/slick-theme.css";
 @import 'components/reset.scss';
 @import 'components/navbar.scss';
 @import 'components/hero.scss';
 @import 'components/quienes_somos.scss';
 @import 'components/clientes.scss';
+@import 'components/image_gallery.sass';
 
 html {
   scroll-behavior: smooth;
@@ -20,6 +23,9 @@ body {
   font-size: 1.1em;
   line-height: 1.5em;
   background: whitesmoke;
+}
+img {
+  width: 100%;
 }
 
 h1 {
@@ -93,4 +99,14 @@ ul li::before {
   .content {
     transform: skewY(1deg);
   }
+}
+
+.slick-track {
+  display: flex;
+}
+.slick-track .slick-slide {
+  display: flex;
+  height: auto;
+  align-items: center;
+  justify-content: center;
 }
