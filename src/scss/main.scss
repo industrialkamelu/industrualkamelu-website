@@ -13,6 +13,8 @@ $breakpoint-tablet: 768px;
 @import 'components/quienes_somos.scss';
 @import 'components/clientes.scss';
 @import 'components/image_gallery.sass';
+@import 'components/image_gallery_effects.scss';
+@import 'components/magnific-popup.scss';
 
 html {
   scroll-behavior: smooth;

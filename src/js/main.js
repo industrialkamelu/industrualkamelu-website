@@ -5,6 +5,7 @@ var jquery = require("jquery");
 window.$ = window.jQuery = jquery;
 
 import 'slick-carousel'
+import './magnific-popup'
 
 
 
@@ -49,6 +50,19 @@ $(document).ready(function () {
 });
 // ===========================================
 
+// ===========================================
+// ***********        Modal      *************
+// ===========================================
+$(document).ready(function () {
 
+  $('.grid-gallery__image').each(function () {
+    $(this).attr("data-mfp-src", $(this).attr('src'));
+  });
 
+  $('.grid-gallery__image').magnificPopup({
+    type: 'image',
+    removalDelay: 300,
+  });
+});
+// ===========================================
 
