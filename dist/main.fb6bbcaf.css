@@ -5208,6 +5208,11 @@ table {
   justify-content: space-around;
   align-items: center;
 }
+@media (max-width: 480px) {
+  .contacto-section .data .box .image {
+    display: none !important;
+  }
+}
 .contacto-section .data .box .text {
   padding: 0.8rem;
 }
