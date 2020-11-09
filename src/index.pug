@@ -15,7 +15,7 @@ html(lang="en")
         a(href="#quienes-somos") Quiénes Somos
         a(href="#servicios") Servicios
         a(href="#clientes") Clientes
-        a(href="#") Contacto
+        a(href="#contacto") Contacto
     .hero
         img.imak-logo(src="img/imak_hero_logo.png", alt="IMAK logo")
 
@@ -71,3 +71,43 @@ html(lang="en")
         each val in [1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12, 13, 14, 15,16, 17, 18]
           .grid-gallery__item
             img.grid-gallery__image(src="img/galeria/" + val + ".png" loading="lazy", style= "border-radius: 0.1em;")
+
+    #contacto.container.contacto-section
+      .data
+        h1 Contacto
+        .box
+          .image
+            i.fas.fa-map-marked(style="font-size: 7em;")
+          .text
+            h2 Administración
+            .direccion
+              | Palomas No. 100
+              br
+              | Col. Granjas Modernas
+              br
+              | Gustavo A. Madero
+              br
+              | c.p. 07460, CDMX, México
+        .box
+          .image
+            i.fas.fa-phone-square(style="font-size: 7em;")
+          .text
+            h2 Teléfonos de oficina:
+            | 01 (52) 6993 8222
+            br
+            | 01 (52) 5835 7101
+            h2 Teléfono Móvil
+            | 55 380 61445
+
+        .box
+          .image
+            i.fas.fa-envelope(style="font-size: 7em;")
+          .text
+            h2 Correo Electrónico
+            | cotizaciones@industrialkamelu.com
+            br
+            | vargaslemus@industrialkamelu.com
+      .map
+
+    .footer
+      p Instalación y Mantenimiento Industrial Kamelu S.A. de C.V., (IMAK S.A. de C.V.)

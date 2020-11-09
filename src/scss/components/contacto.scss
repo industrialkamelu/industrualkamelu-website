@@ -1,0 +1,65 @@
+
+$card-border-radius: 0.5rem;
+.contacto-section {
+  display: grid;
+  grid-template: "data map";
+  font-size: 0.9rem;
+  padding-bottom: 3rem;
+  line-height: 1.4rem;
+  background-image: url('../img/map_desktop.png');
+  background-size: cover;
+  background-position: right;
+
+  .data {
+    grid-area: data;
+    display: grid;
+    row-gap: 1rem;
+
+    .box {
+      background: white;
+      border-radius: $card-border-radius;
+      box-shadow: $shaddow;
+      min-height: 10rem;
+      display: flex;
+      max-width: 40rem;
+      .image {
+        background-color: #29adec;
+        color: white;
+        min-width: 11rem;
+        //flex-grow: 0;
+        flex-shrink: 0;
+        flex-basis: 20%;
+        border-top-left-radius: $card-border-radius;
+        border-bottom-left-radius: $card-border-radius;
+        display: flex;
+        justify-content: space-around;
+        align-items: center;
+      }
+      .text {
+        padding: 0.8rem;
+      }
+    }
+  }
+  .map {
+    grid-area: map;
+  }
+
+  h1 {
+    color: $blue-color;
+    font-size: 2.5rem;
+    padding-bottom: 1em !important;
+    text-shadow: 5px 5px 16px whitesmoke;
+    font-weight: 900;
+  }
+
+  h2 {
+    margin-top: 0.3rem !important;
+    margin-bottom: 0.3rem !important;
+    font-size: 1rem;
+  }
+}
+
+.direccion {
+  font-style: oblique;
+}
+
